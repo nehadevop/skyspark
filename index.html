@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js" defer></script>
+
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .animated-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #3498db, #2c3e50);
+            z-index: -1;
+            animation: animateBackground 10s linear infinite;
+        }
+
+        @keyframes animateBackground {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        /* Rest of your styles */
+
+
+        .search-container {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            padding: 10px;
+            width: 300px;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            outline: none;
+            transition: box-shadow 0.3s;
+        }
+
+            .search-bar:hover {
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .search-bar::placeholder {
+                color: #aaa;
+            }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            display:none;
+        }
+
+        .country {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .temperature {
+            font-size: 36px;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+
+        .city {
+            font-size: 18px;
+            color: #777;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            padding: 2%;
+        }
+
+        .app-name {
+            font-size: 24px;
+        }
+    </style>
+    <title>Dynamic Webpage</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="app-name">Skyspark - Know Your City Weather</div>
+    </nav>
+    <div class="animated-background"></div>
+
+    <div class="content">
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search..." id="search">
+        </div>
+        <div class="card" id="card">
+            <div class="country" id="country">Country Name</div>
+            <div class="temperature" id="temperature">25°C</div>
+            <div class="city" id="city">City Name</div>
+        </div>
+        </div>
+</body>
+</html>
