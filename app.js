@@ -6,7 +6,7 @@ search.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
         event.preventDefault();
         console.log(search.value)
-        fetch(`http://api.weatherapi.com/v1/current.json?key=df286c56ea5d4161b7775511233008&q=${search.value}&aqi=no`)
+        fetch(`https://api.weatherapi.com/v1/current.json?key=df286c56ea5d4161b7775511233008&q=${search.value}&aqi=no`)
             .then(response => response.json())
             .then((data) => {
                 console.log(data.location)
