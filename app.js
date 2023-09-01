@@ -21,6 +21,13 @@ search.addEventListener("keypress", function (event) {
 
 
             })
+            .catch((error)=>{
+                console.log(error.message)
+                document.getElementById("error").innerHTML="something went wrong"
+                document.getElementById("error").style="display: block;"
+                const card = document.getElementById('card').style = "display:none;"
+
+            })
         
 
     }
